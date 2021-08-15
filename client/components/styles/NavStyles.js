@@ -5,16 +5,16 @@ const NavStyles = styled.ul`
   padding: 0;
   display: flex;
   justify-self: end;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  background: #fff;
+  height: 80px;
   a,
   button {
-    padding: 1rem 3rem;
+    position: relative;
     display: flex;
     align-items: center;
-    position: relative;
-    text-transform: uppercase;
+    padding: 1rem 3rem;
     font-weight: 600;
-    font-size: 1em;
     background: none;
     border: 0;
     cursor: pointer;
@@ -25,11 +25,9 @@ const NavStyles = styled.ul`
     &:before {
       content: '';
       width: 2px;
-      background: var(--lightGray);
       height: 100%;
       left: 0;
       position: absolute;
-      /* transform: skew(-20deg); */
       top: 0;
       bottom: 0;
     }

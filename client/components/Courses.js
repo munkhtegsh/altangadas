@@ -7,12 +7,13 @@ const SectionBlock = styled.div`
   height: 5rem;
   align-items: center;
   font-weight: 700;
-  color: var(--white);
+  color: var(--lightBlack);
   text-transform: uppercase;
   font-size: 1.8rem;
   letter-spacing: 2px;
-  background: linear-gradient(45deg, rgba(234, 67,53,1), #9198e5);
-  margin-bottom: 2rem;
+  /* background: linear-gradient(45deg, rgba(234, 67,53,1), #9198e5); */
+  background: var(--skyBlue);
+  margin-bottom: 1.5rem;
   padding-left: 1rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.3) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
   cursor: pointer;
@@ -21,7 +22,7 @@ const SectionBlock = styled.div`
 
 const DetailBlock = styled.div`
   /* width: calc((var(--maxWidth) - 100px) / 3); */
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;  text-decoration: none;
+  box-shadow: 0px 0px 2px 0px rgba(24, 24, 24, 0.08),0px 2px 4px 1px rgba(24, 24, 24, 0.16);
   font-variant-ligatures: normal;
   font-variant-caps: normal;
   font-variant-numeric: normal;
@@ -41,7 +42,13 @@ const DetailBlock = styled.div`
   }
 
   :hover {
-    background: linear-gradient(45deg, white, #DFDEF4);;
+    /* background: linear-gradient(45deg, white, #DFDEF4); */
+    /* background: var(--starLight); */
+     /* --dx-g-card-padding: 20px; */
+      color: var(--hoverBlue);
+      transition: box-shadow 0.3s ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;  text-decoration: none;
+      overflow: hidden;
   }
 
   hr {

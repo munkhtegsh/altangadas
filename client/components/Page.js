@@ -13,11 +13,13 @@ const GlobalStyles = createGlobalStyle`
     font-style: normal;
   }
   html {
-    --yellow: #fbcc35;
+    --starLight: #f9cf36;
     --red: #ff0000;
     --blue: #279bf7;
     --highBlue: #19b6fa;
     --lightBlue: #6EC1E4;
+    --skyBlue: #d1edee;
+    --hoverBlue: #004485;
     --gray: #7A7A7A;
     --lightGray: #e1e1e1;
     --heavyGray: #54595F;
@@ -26,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
     --purple: #4054B2;
     --offWhite: #ededed;
     --black: #000;
+    --lightBlack: #292933;
     --white: #FFF;
     --main-text-color: #555555;
     --maxWidth: 1000px;

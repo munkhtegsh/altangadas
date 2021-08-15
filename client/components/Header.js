@@ -2,34 +2,37 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import Nav from './Nav';
 import Search from './Search';
+import AltanGadas from '../public/static/logo.svg';
 
 const Logo = styled.h1`
-  font-size: 4rem;
-  margin-left: 2rem;
   position: relative;
   z-index: 2;
-  background: red;
+  margin: 0;
+  text-decoration: none;
+
   /* transform: skew(-7deg); */
   a {
-    color: white;
-    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
     text-transform: uppercase;
-    padding: 0.5rem 1rem;
   }
 `;
 
 const HeaderStyles = styled.header`
   .bar {
-    border-bottom: 10px solid var(--black, black);
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
+    /* display: grid;
+    grid-template-columns: auto 1fr; */
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
+    box-shadow: 0 7px 20px 0 rgb(0 0 0 / 4%);
+    background: #fff;
+    height: 80px;
+    padding: 0 4rem;
   }
   .sub-bar {
     display: grid;
     grid-template-columns: 1fr auto;
-    border-bottom: 1px solid var(--black, black);
   }
 `;
 
@@ -38,13 +41,14 @@ export default function Header() {
     <HeaderStyles>
       <div className="bar">
         <Logo>
+          <AltanGadas/>
           <Link href="/">Алтан Гадас</Link>
         </Logo>
         <Nav />
       </div>
-      <div className="sub-bar">
+      {/* <div className="sub-bar">
         <Search/>
-      </div>
+      </div> */}
     </HeaderStyles>
   );
 }
