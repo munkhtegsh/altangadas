@@ -19,7 +19,11 @@ const Logo = styled.h1`
 `;
 
 const HeaderStyles = styled.header`
+  position: fixed;
+  width: 100%;
+  top: 0;
   .bar {
+
     display: flex;
     /* display: grid;
     grid-template-columns: auto 1fr; */

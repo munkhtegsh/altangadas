@@ -37,38 +37,47 @@ const Section = styled.div`
 `
 
 const ImageContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  min-width: 100%;
   display: block;
   margin: 0 auto;
-  width: 80%;
   position: relative;
+  width: 881px;
+  max-width: 100%;
+  z-index: 0;
   background: green;
+  width: 100%;
+  max-width: 100%;
+`
+
+const HeroScreen = styled.div`
+    display: flex;
+    justify-content: center;
+    width: 86.2%;
+    max-width: 86.2%;
+    position: relative;
+    left: 8.2%;
+    top: 4.5%;
+    z-index: -1;
+    background: blue;
+    box-sizing: border-box;
 `
 
 const LaptopImgContainer = styled.div`
-
-  position: relative;
   background: red;
-  width: 100%;
-  height: 100%;
-  /* z-index: 1; */
+  text-align: center;
+  vertical-align: middle;
+  border-style: none;
 `
 
 const CodeImgContainer = styled.div`
-  /* display: flex;
-  justify-content: center; */
-  /* min-width: 100%; */
   position: absolute;
   background: yellow;
-
-  top: 34px;
   width: 100%;
-  height: 200px;
-  /* z-index: 2; */
+  text-align: center;
+  top: 25px;
+  padding: 0 46px; /* fixing for mobile */
 
-  /* left: 89px; */
+
+
 `
 
 const Home = () => {
@@ -76,19 +85,20 @@ const Home = () => {
     <Main>
       <Section>
         <Title>Practice makes progress</Title>
-        <Text>Lessonly’s enablement software ey’s enablement software empower teams to hone their skills and get up to speed 2.3x faster.</Text>
+        <Text>Altangadas enablement software ey’s enablement software empower teams to hone their skills and get up to speed 2.3x faster.</Text>
       </Section>
 
       <ImageContainer>
-        <LaptopImgContainer>
-          <Image src="/laptop.png" alt="laptop image" width="600" height="460"  />
-        </LaptopImgContainer>
-        <CodeImgContainer>
-          <Image src="/code.png" alt="code image" width="500" height="360" />
-        </CodeImgContainer>
-        {/* <Video hashedId="1nt2z6a4w2" /> */}
+        <HeroScreen>
+          <CodeImgContainer>
+            <Image src="/code.png" alt="code image" width="630" height="400"/>
+          </CodeImgContainer>
+          {/* <Video hashedId="1nt2z6a4w2" /> */}
+          <LaptopImgContainer>
+            <Image src="/laptop.png" alt="laptop image" width="850" height="600"  />
+          </LaptopImgContainer>
+        </HeroScreen>
       </ImageContainer>
-    <Link href='/courses'>Courses</Link>
     </Main>
   )
 }

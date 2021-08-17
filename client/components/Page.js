@@ -49,9 +49,9 @@ const GlobalStyles = createGlobalStyle`
     background:  #f4f4f4;
     background:  #fff;
     background-color: #eeeeee;
-	font-family: 'helvetica', sans-serif;
-	font-size: 16px;
-	transform: translate3d(0,0,0);
+    font-family: 'helvetica', sans-serif;
+    font-size: 16px;
+	/* transform: translate3d(0,0,0); */
 	/* background: linear-gradient(135deg, #4378b9 0%,#9b59b6 100%); */
   }
   a {
@@ -70,7 +70,8 @@ const GlobalStyles = createGlobalStyle`
 const InnerStyles = styled.div`
   max-width: var(--maxWidth);
   margin: 0 auto;
-  padding: 2rem;
+  padding: 8rem 2rem 2rem 2rem;
+  margin-top: 20px;
 `
 
 export default function Page({children}) {

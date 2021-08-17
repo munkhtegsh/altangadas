@@ -20,10 +20,10 @@ document.write(sainuu); // Hello, World
 const JS_DataTypes = () => {
   return (
     <LessonStyles>
-      <h2>JavaScript Коммент, Хувьсагч болон Өгөгдлийн төрлүүд</h2>
-      <h4>Энэ хичээл дараах зүйлсийг сурна:</h4>
+      <h2>Коммент, Хувьсагч болон Өгөгдлийн төрлүүд</h2>
+      <h4>Энэ хичээлээр:</h4>
       <ul>
-        <li>Komment - JavaScript коммент бичих</li>
+        <li>Komment - Kод коммент бичих</li>
         <li>Variables - Хувьсагчын талаар товчхон</li>
         <li>Data types - Өгөгдөл болон түүний төрлүүд</li>
         <li>Үр дүнг харуулах</li>
@@ -44,7 +44,7 @@ const JS_DataTypes = () => {
          {/* Нийт 3 төрлийн түлхүүр үг байдаг. */}
       </p>
       <BlogCodeBlock code={hwExample1} language="js" />
-  
+
     </LessonStyles>
   )
 }

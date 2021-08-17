@@ -101,7 +101,7 @@ export const BlogCodeBlock = ({ code, language }) => (
             <LineContent>
               {line.map((token, key) => (
                 <span key={key} {...getTokenProps({ token, key })} />
-       1       ))}
+              ))}
             </LineContent>
           </Line>
         ))}

@@ -9,8 +9,8 @@ const SectionBlock = styled.div`
   font-weight: 700;
   color: var(--lightBlack);
   text-transform: uppercase;
-  font-size: 1.8rem;
-  letter-spacing: 2px;
+  font-size: 1.6rem;
+  letter-spacing: 1.6px;
   /* background: linear-gradient(45deg, rgba(234, 67,53,1), #9198e5); */
   background: var(--skyBlue);
   margin-bottom: 1.5rem;
@@ -47,7 +47,9 @@ const DetailBlock = styled.div`
      /* --dx-g-card-padding: 20px; */
       color: var(--hoverBlue);
       transition: box-shadow 0.3s ease-in-out;
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;  text-decoration: none;
+      /* box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px; */
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+      text-decoration: none;
       overflow: hidden;
   }
 
@@ -101,7 +103,7 @@ const Course = ({ title, lessons}) => {
 
 const Courses = () => {
   return data.map((course, i) =>
-    <Course key={i} title={course.title} lessons={course.lessons} />
+      <Course key={i} title={course.title} lessons={course.lessons} />
   );
 }
 

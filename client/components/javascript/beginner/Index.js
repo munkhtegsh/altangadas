@@ -14,18 +14,18 @@ export default BeginnerJSTitles;
 
 const BeginnerJSTitleList = [
   {
-    'title': 'JavaScript Introduction',
+    'title': 'Таницлуулга ',
     'subTitles': [
       {
-        'subTitle': 'JavaScript хэлний талаар товч мэдээлэл',
+        'subTitle': 'JavaScript-ийн талаар товчхон',
         'url': '/courses/lessons/jsdefinition'
       },
       {
-        'subTitle': 'Код коммент, хувьсагч болон өгөгдлийн төрлүүд',
+        'subTitle': 'Коммент, хувьсагч болон өгөгдлийн төрлүүд',
         'url': '/courses/lessons/js-datatypes'
       },
       {
-        'subTitle': 'Boolean Logic',
+        'subTitle': 'Boolian ложик',
         'url': '/hello'
       },
       {
