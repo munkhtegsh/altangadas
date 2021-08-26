@@ -9,12 +9,20 @@ export const LessonStyles = styled.div`
   }
 
   h4 {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 2rem;
     letter-spacing: 0.2px;
-    margin: 0 0 1.5rem 0;
+    margin: 2.5rem 0 1.5rem 0;
     overflow-wrap: break-word;
     border-bottom: 1px solid var(--gray);
+  }
+
+  h5 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: 0.2px;
+    margin: 1.5rem 0 0;
+    overflow-wrap: break-word;
   }
 
   p {
@@ -36,7 +44,7 @@ export const LessonStyles = styled.div`
   blockquote {
     border-left: 4px solid var(--purple);
     padding-left: 2rem;
-    margin: 0;
+    margin: 0 0 1rem 0;
     background-color: #f5f5f5;
   }
 

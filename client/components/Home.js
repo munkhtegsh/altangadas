@@ -43,7 +43,7 @@ const ImageContainer = styled.div`
   width: 881px;
   max-width: 100%;
   z-index: 0;
-  background: green;
+  /* background: green; */
   width: 100%;
   max-width: 100%;
 `
@@ -57,12 +57,12 @@ const HeroScreen = styled.div`
     left: 8.2%;
     top: 4.5%;
     z-index: -1;
-    background: blue;
+    /* background: blue; */
     box-sizing: border-box;
 `
 
 const LaptopImgContainer = styled.div`
-  background: red;
+  /* background: red; */
   text-align: center;
   vertical-align: middle;
   border-style: none;
@@ -70,11 +70,12 @@ const LaptopImgContainer = styled.div`
 
 const CodeImgContainer = styled.div`
   position: absolute;
-  background: yellow;
+  /* background: yellow; */
   width: 100%;
   text-align: center;
-  top: 25px;
-  padding: 0 46px; /* fixing for mobile */
+  /* top: 25px; */
+  top: 5%;
+  padding: 0 12%;
 
 
 
