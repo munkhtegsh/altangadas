@@ -12,9 +12,15 @@ const Logo = styled.h1`
 
   /* transform: skew(-7deg); */
   a {
+
     font-size: 1.5rem;
     color: black;
     text-transform: uppercase;
+    @media (max-width: 600px) {
+      visibility: hidden;
+
+    }
+
   }
 `;
 
@@ -22,6 +28,7 @@ const HeaderStyles = styled.header`
   position: fixed;
   width: 100%;
   top: 0;
+  line-height: 1.7rem;
   .bar {
 
     display: flex;
@@ -45,7 +52,7 @@ export default function Header() {
     <HeaderStyles>
       <div className="bar">
         <Logo>
-          <AltanGadas/>
+            <AltanGadas/>
           <Link href="/">Алтан Гадас</Link>
         </Logo>
         <Nav />
