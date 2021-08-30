@@ -92,11 +92,11 @@ const Home = () => {
       <ImageContainer>
         <HeroScreen>
           <CodeImgContainer>
-            <Image src="/code.png" alt="code image" width="630" height="400"/>
+            <Image src="/static/images/code.png" alt="code image" width="630" height="400"/>
           </CodeImgContainer>
           {/* <Video hashedId="1nt2z6a4w2" /> */}
           <LaptopImgContainer>
-            <Image src="/laptop.png" alt="laptop image" width="850" height="600"  />
+            <Image src="/static/images/laptop.png" alt="laptop image" width="850" height="600"  />
           </LaptopImgContainer>
         </HeroScreen>
       </ImageContainer>

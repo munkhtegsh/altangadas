@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import Nav from './Nav';
 import Search from './Search';
-import AltanGadas from '../public/static/logo.svg';
+import Image from 'next/image';
 
 const Logo = styled.h1`
   position: relative;
@@ -52,7 +52,7 @@ export default function Header() {
     <HeaderStyles>
       <div className="bar">
         <Logo>
-            <AltanGadas/>
+          <Image src="/static/images/logo.svg" alt="Star logo" width="25px" height="25px"></Image>
           <Link href="/">Алтан Гадас</Link>
         </Logo>
         <Nav />
