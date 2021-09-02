@@ -31,7 +31,6 @@ COPY --from=builder --chown=nextjs:nodejs /var/www/html/frontend/.next ./.next
 COPY --from=builder /var/www/html/frontend/node_modules ./node_modules
 COPY --from=builder /var/www/html/frontend/package.json ./package.json
 
-RUN chown -R $USER /var/www/html/frontend
 USER nextjs
 
 EXPOSE 7777
