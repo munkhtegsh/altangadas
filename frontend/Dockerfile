@@ -42,8 +42,8 @@ USER node
 # Uncomment the following line in case you want to disable telemetry.
 # ENV NEXT_TELEMETRY_DISABLED 1
 
-CMD ls -ltr && npm run build && npm run start
+# CMD ls -ltr && npm run build && npm run start
 
-# CMD ["npm", "build", "start" ]
+CMD ["npm", "start" ]
 
 # CMD [ "pm2-runtime", "npm", "--", "start" ]
