@@ -35,8 +35,6 @@ USER nextjs
 
 EXPOSE 7777
 
-USER node
-
 # Next.js collects completely anonymous telemetry data about general usage.
 # Learn more here: https://nextjs.org/telemetry
 # Uncomment the following line in case you want to disable telemetry.
