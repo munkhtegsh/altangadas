@@ -2,7 +2,7 @@
 FROM node:alpine AS deps
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
 RUN apk add --no-cache libc6-compat
-WORKDIR /var/www/html/frontend
+WORKDIR /app/frontend
 # RUN npm install --global pm2
 COPY ./package*.json ./
 RUN npm install --frozen-lockfile
@@ -10,14 +10,14 @@ RUN npm install --frozen-lockfile
 # Rebuild the source code only when needed
 FROM node:alpine AS builder
 # RUN npm install --global pm2
-WORKDIR /var/www/html/frontend
+WORKDIR /app/frontend
 COPY . .
-COPY --from=deps /var/www/html/frontend/node_modules ./node_modules
+COPY --from=deps /app/frontend/node_modules ./node_modules
 RUN npm run build && npm install --production --ignore-scripts --prefer-offline
 
 # Production image, copy all the files and run next
 FROM node:alpine AS runner
-WORKDIR /var/www/html/frontend
+WORKDIR /app/frontend
 
 ENV NODE_ENV production
 
@@ -25,11 +25,11 @@ RUN addgroup -g 1001 -S nodejs
 RUN adduser -S nextjs -u 1001
 
 # You only need to copy next.config.js if you are NOT using the default configuration
-# COPY --from=builder /var/www/html/next.config.js ./
-COPY --from=builder /var/www/html/frontend/public ./public
-COPY --from=builder --chown=nextjs:nodejs /var/www/html/frontend/.next ./.next
-COPY --from=builder /var/www/html/frontend/node_modules ./node_modules
-COPY --from=builder /var/www/html/frontend/package.json ./package.json
+# COPY --from=builder /app/next.config.js ./
+COPY --from=builder /app/frontend/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/frontend/.next ./.next
+COPY --from=builder /app/frontend/node_modules ./node_modules
+COPY --from=builder /app/frontend/package.json ./package.json
 
 USER nextjs
 
