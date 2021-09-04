@@ -21,8 +21,10 @@ WORKDIR /var/www/html/frontend
 
 ENV NODE_ENV production
 
-RUN addgroup -g 1001 -S nodejs
-RUN adduser -S nextjs -u 1001
+# RUN addgroup -g 1001 -S nodejs
+# RUN adduser -S nextjs -u 1001
+RUN addgroup -S nodejs
+RUN adduser -S -D -h /var/www/html/frontend nextjs nodejs
 
 # You only need to copy next.config.js if you are NOT using the default configuration
 # COPY --from=builder /var/www/html/next.config.js ./
