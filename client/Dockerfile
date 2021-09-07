@@ -42,4 +42,4 @@ EXPOSE 7777
 # ENV NEXT_TELEMETRY_DISABLED 1
 
 # CMD ls -ltr && npm run build && npm run start
-CMD ["npm", "start" ]
+CMD ["npm", "build" ]
