@@ -6,7 +6,6 @@ WORKDIR /app
 # RUN npm install --global pm2
 COPY package.json package-lock.json ./
 
-RUN npm config set unsafe-perm true
 RUN npm install --frozen-lockfile
 
 # Rebuild the source code only when needed
@@ -24,6 +23,9 @@ ENV NODE_ENV production
 
 RUN addgroup -g 1001 -S nodejs
 RUN adduser -S nextjs -u 1001
+# Give owner rights to the current user
+RUN chown -Rh $user:$user /app
+
 # RUN addgroup -S nodejs
 # RUN adduser -S -D -h /app nextjs nodejs
 
