@@ -5,6 +5,8 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 # RUN npm install --global pm2
 COPY package.json package-lock.json ./
+
+RUN npm config set unsafe-perm true
 RUN npm install --frozen-lockfile
 
 # Rebuild the source code only when needed
