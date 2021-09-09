@@ -24,7 +24,7 @@ ENV NODE_ENV production
 RUN addgroup -g 1001 -S nodejs
 RUN adduser -S nextjs -u 1001
 # Give owner rights to the current user
-RUN chown -Rh $user:$user /app
+RUN chown -Rh $nextjs:$nodejs /app
 
 # RUN addgroup -S nodejs
 # RUN adduser -S -D -h /app nextjs nodejs
