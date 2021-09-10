@@ -58,4 +58,4 @@ CMD ["npm", "run", "start" ]
 # # ENV NEXT_TELEMETRY_DISABLED 1
 
 # # CMD ls -ltr && npm run build && npm run start
-# CMD ["npm", "run", "dev" ]
+# CMD ["npm", "run", "start" ]
