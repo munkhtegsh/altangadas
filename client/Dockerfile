@@ -9,6 +9,7 @@ COPY . .
 EXPOSE 7777
 CMD ["npm", "run", "build" ]
 
+
 # #COPY --from=deps /app/node_modules ./node_modules
 # RUN npm run build && npm install --production --ignore-scripts --prefer-offline
 
