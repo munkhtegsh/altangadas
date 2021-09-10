@@ -1,14 +1,14 @@
 version: '3'
 services:
-  nginx:
-    restart: always
-    build:
-      dockerfile: Dockerfile
-      context: ./nginx
-    ports:
-      - '8888:80' # 3050 totally up to you
-    depends_on:
-      - client
+  # nginx:
+  #   restart: always
+  #   build:
+  #     dockerfile: Dockerfile
+  #     context: ./nginx
+  #   ports:
+  #     - '8888:80' # 3050 totally up to you
+  #   depends_on:
+  #     - client
   client:
     stdin_open: true
     build:
