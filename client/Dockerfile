@@ -6,46 +6,8 @@ COPY ./package.json ./
 RUN npm install --frozen-lockfile
 COPY . .
 #RUN yarn global add pm2
-EXPOSE 7777
-CMD ["npm", "run", "build" ]
-
-
-# #COPY --from=deps /app/node_modules ./node_modules
-# RUN npm run build && npm install --production --ignore-scripts --prefer-offline
-
-# # Production image, copy all the files and run next
-# FROM node:alpine AS runner
-# WORKDIR /app
-
-# ENV NODE_ENV production
-
-# RUN addgroup -g 1001 -S nodejs
-# RUN adduser -S nextjs -u 1001
-# # Give owner rights to the current user
-# RUN chown -Rh nextjs:nodejs /app
-
-# # RUN addgroup -S nodejs
-# # RUN adduser -S -D -h /app nextjs nodejs
-
-# # You only need to copy next.config.js if you are NOT using the default configuration
-# # COPY --from=builder /app/next.config.js ./
-# COPY --from=builder /app/public ./public
-# COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
-# COPY --from=builder /app/node_modules ./node_modules
-# COPY --from=builder /app/package.json ./package.json
-
-# USER nextjs
-
 # EXPOSE 7777
-
-# # Next.js collects completely anonymous telemetry data about general usage.
-# # Learn more here: https://nextjs.org/telemetry
-# # Uncomment the following line in case you want to disable telemetry.
-# # ENV NEXT_TELEMETRY_DISABLED 1
-
-# # CMD ls -ltr && npm run build && npm run start
-# CMD ["npm", "run", "build" ]
-
+CMD ["npm", "run", "start" ]
 
 
 # # Install dependencies only when needed
@@ -96,4 +58,4 @@ CMD ["npm", "run", "build" ]
 # # ENV NEXT_TELEMETRY_DISABLED 1
 
 # # CMD ls -ltr && npm run build && npm run start
-# CMD ["npm", "run", "build" ]
+# CMD ["npm", "run", "dev" ]
