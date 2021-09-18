@@ -1,14 +1,15 @@
 FROM node:latest
 WORKDIR /app
 #RUN apk add --no-cache libc6-compat
-COPY ./package.json ./
+RUN npm install --global pm2
+COPY ./package*.json ./
 #COPY package-lock.json ./
 RUN npm install --frozen-lockfile
 COPY . .
-#RUN yarn global add pm2
-# EXPOSE 7777
-CMD ["npm", "run", "start" ]
-
+RUN npm run build
+# CMD ["npm", "run", "start" ]
+# Launch app with PM2
+CMD [ "pm2-runtime", "start", "npm", "--", "start" ]
 
 # # Install dependencies only when needed
 # FROM node:alpine AS deps
