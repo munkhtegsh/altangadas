@@ -1,5 +1,6 @@
 FROM nginx
 COPY ./default.conf /etc/nginx/conf.d/default.conf
+
 ENV https_proxy 80
 RUN apt-get update && \
   apt-get install -y openssl && \
@@ -10,8 +11,6 @@ RUN apt-get update && \
   openssl req -new -key cert.key -out cert.csr \
   -subj "/C=US/ST=California/L=San Francisco/O=Example/OU=Example/CN=example.com" && \
   openssl x509 -req -days 365 -in cert.csr -signkey cert.key -out cert.crt
-# EXPOSE 7777
-# EXPOSE 8888
 EXPOSE 80
 
 
