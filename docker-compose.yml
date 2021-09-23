@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
       context: ./nginx
     ports:
-      - '8888:80' # 3050 totally up to you
+      - '3050:80' # 3050 totally up to you
     depends_on:
       - client
   client:
@@ -19,3 +19,6 @@ services:
     volumes:
       - /app/node_modules # node_modules won't override
       - ./client:/app # everything inside would share with App folder
+    # environment:
+    #   - REDIS_HOST=redis   # furture reference for setting env vars
+
