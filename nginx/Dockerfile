@@ -1,8 +1,8 @@
 FROM nginx
 RUN rm /etc/nginx/conf.d/default.conf
 COPY ./default.conf /etc/nginx/conf.d/default.conf
-RUN mkdir /usr/share/nginx/log
-ENV https_proxy 80
+
+# ENV https_proxy 80
 RUN apt-get update && \
   apt-get install -y openssl && \
   cd /etc/nginx && \

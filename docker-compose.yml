@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
       context: ./nginx
     ports:
-      - '3050:80' # 3050 totally up to you
+      - '80:80' # 3050 totally up to you
     depends_on:
       - client
   client:
@@ -14,8 +14,8 @@ services:
     build:
       dockerfile: Dockerfile
       context: ./client
-    ports:
-      - "7777:7777"
+    # ports:
+    #   - "7777:7777"
     volumes:
       - /app/node_modules # node_modules won't override
       - ./client:/app # everything inside would share with App folder
