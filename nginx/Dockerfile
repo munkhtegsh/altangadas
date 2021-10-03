@@ -2,6 +2,11 @@ FROM nginx
 RUN rm /etc/nginx/conf.d/default.conf
 COPY ./default.conf /etc/nginx/conf.d/default.conf
 
+# install certbot
+# RUN add-apt-repository ppa:certbot/certbot
+RUN apt-get update -y
+RUN apt-get install -y certbot python-certbot-nginx
+
 # ENV https_proxy 80
 RUN apt-get update && \
   apt-get install -y openssl && \
@@ -12,6 +17,18 @@ RUN apt-get update && \
   openssl req -new -key cert.key -out cert.csr \
   -subj "/C=US/ST=California/L=San Francisco/O=Example/OU=Example/CN=example.com" && \
   openssl x509 -req -days 365 -in cert.csr -signkey cert.key -out cert.crt
-EXPOSE 80
+
+EXPOSE 80 443
+
+# add nginx conf
+#ADD config/altangadas.com /etc/nginx/sites-available/altangadas.com
+
+# add altangadas server certs
+ADD certs/server.crt /etc/nginx/certs/server.crt
+ADD certs/server.key /etc/nginx/certs/server.key
+
+# make certs dir as volume
+VOLUME ["/etc/letsencrypt"]
+
 CMD ["nginx", "-g", "daemon off;"]
 

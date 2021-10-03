@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
       context: ./nginx
     ports:
-      - '80:80' # 3050 totally up to you
+      - '80:80'
     depends_on:
       - client
   client:
